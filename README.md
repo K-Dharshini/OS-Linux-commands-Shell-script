@@ -1,9 +1,13 @@
 # OS-Linux-commands-Shell-scripting
+
 Operating systems Lab exercise
+
 # Linux commands-Shell scripting
+
 Linux commands-Shell scripting
 
 # AIM:
+
 To practice Linux Commands and Shell Scripting
 
 # DESIGN STEPS:
@@ -46,6 +50,7 @@ s.n. dasgupta
 ### Display the content of the files
 
 cat < file1
+
 ## OUTPUT
 ```
 chanchal singhvi
@@ -55,6 +60,7 @@ sumit chakrobartychanchal singhvi
 ```
 
 cat < file2
+
 ## OUTPUT
 ```
 anil aggarwal
@@ -67,12 +73,14 @@ s.n. dasgupta
 # Comparing Files
 
 cmp file1 file2
+
 ## OUTPUT
 ```
 file1 file2 differ: char 1, line 1
 ```
 
 comm file1 file2
+
  ## OUTPUT
 ```
 anil aggarwal
@@ -86,6 +94,7 @@ sumit chakrobarty
 ```
 
 diff file1 file2
+
 ## OUTPUT
 ```
 --- file1
@@ -120,6 +129,7 @@ cat > file22
 ```
 
 cut -c1-3 file11
+
 ## OUTPUT
 ```
 Hel
@@ -127,6 +137,7 @@ Thi
 ```
 
 cut -d "|" -f 1 file22
+
 ## OUTPUT
 ```
 1001
@@ -135,6 +146,7 @@ cut -d "|" -f 1 file22
 ```
 
 cut -d "|" -f 2 file22
+
 ## OUTPUT
 ```
 Ram
@@ -156,24 +168,28 @@ hello world
 ```
  
 grep Hello newfile 
+
 ## OUTPUT
 ```
 Hello world
 ```
 
-grep hello newfile 
+grep hello newfile
+
 ## OUTPUT
 ```
 hello world
 ```
 
-grep -v hello newfile 
+grep -v hello newfile
+
 ## OUTPUT
 ```
 Hello world
 ```
 
 cat newfile | grep -i "hello"
+
 ## OUTPUT
 ```
 Hello world
@@ -181,12 +197,14 @@ hello world
 ```
 
 cat newfile | grep -i -c "hello"
+
 ## OUTPUT
 ```
 2
 ```
 
-grep -w -n world newfile   
+grep -w -n world newfile 
+
 ## OUTPUT
 ```
 1:Hello world
@@ -214,6 +232,7 @@ Linux is best in this World
 ```
 
 egrep -w 'Hello|hello' newfile 
+
 ## OUTPUT
 ```
 Hello world
@@ -221,6 +240,7 @@ hello world
 ```
 
 egrep -w '(H|h)ello' newfile 
+
 ## OUTPUT
 ```
 Hello world
@@ -228,6 +248,7 @@ hello world
 ```
 
 egrep -w '(H|h)ell[a-z]' newfile 
+
 ## OUTPUT
 ```
 Hello world
@@ -235,12 +256,14 @@ hello world
 ```
 
 egrep '(^hello)' newfile 
+
 ## OUTPUT
 ```
 hello world
 ```
 
 egrep '(world$)' newfile 
+
 ## OUTPUT
 ```
 Hello world
@@ -248,12 +271,14 @@ hello world
 ```
 
 egrep '(World$)' newfile 
+
 ## OUTPUT
 ```
 Linux is best in this World
 ```
 
 egrep '((W|w)orld$)' newfile 
+
 ## OUTPUT
 ```
 Hello world
@@ -262,24 +287,28 @@ Linux is best in this World
 ```
 
 egrep '[1-9]' newfile 
+
 ## OUTPUT
 ```
 Linux is world number 1
 ```
 
 egrep 'Linux.*world' newfile 
+
 ## OUTPUT
 ```
 Linux is world number 1
 ```
 
 egrep 'Linux.*World' newfile 
+
 ## OUTPUT
 ```
 Linux is best in this World
 ```
 
 egrep l{2} newfile
+
 ## OUTPUT
 ```
 Hello world
@@ -287,6 +316,7 @@ hello world
 ```
 
 egrep 's{1,2}' newfile
+
 ## OUTPUT 
 ```
 Linux is world number 1
@@ -308,18 +338,21 @@ cat > file23
 ```
 
 sed -n -e '3p' file23
+
 ## OUTPUT
 ```
 1002 | tom |  5000 | Admin
 ```
 
 sed -n -e '$p' file23
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
 ```
 
 sed  -e 's/Ram/Sita/' file23
+
 ## OUTPUT
 ```
 1001 | Sita | 10000 | HR
@@ -333,6 +366,7 @@ sed  -e 's/Ram/Sita/' file23
 ```
 
 sed  -e '2s/Ram/Sita/' file23
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
@@ -346,6 +380,7 @@ sed  -e '2s/Ram/Sita/' file23
 ```
 
 sed  '/tom/s/5000/6000/' file23
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
@@ -359,6 +394,7 @@ sed  '/tom/s/5000/6000/' file23
 ```
 
 sed -n -e '1,5p' file23
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
@@ -369,6 +405,7 @@ sed -n -e '1,5p' file23
 ```
 
 sed -n -e '2,/Joe/p' file23
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
@@ -377,6 +414,7 @@ sed -n -e '2,/Joe/p' file23
 ```
 
 sed -n -e '/tom/,/Joe/p' file23
+
 ## OUTPUT
 ```
 1002 | tom |  5000 | Admin
@@ -384,6 +422,7 @@ sed -n -e '/tom/,/Joe/p' file23
 ```
 
 seq 10 
+
 ## OUTPUT
 ```
 1
@@ -399,6 +438,7 @@ seq 10
 ```
 
 seq 10 | sed -n '4,6p'
+
 ## OUTPUT
 ```
 4
@@ -407,6 +447,7 @@ seq 10 | sed -n '4,6p'
 ```
 
 seq 10 | sed -n '2,~4p'
+
 ## OUTPUT
 ```
 2
@@ -415,6 +456,7 @@ seq 10 | sed -n '2,~4p'
 ```
 
 seq 3 | sed '2a hello'
+
 ## OUTPUT
 ```
 1
@@ -424,6 +466,7 @@ hello
 ```
 
 seq 2 | sed '2i hello'
+
 ## OUTPUT
 ```
 1
@@ -432,6 +475,7 @@ hello
 ```
 
 seq 10 | sed '2,9c hello'
+
 ## OUTPUT
 ```
 1
@@ -440,6 +484,7 @@ hello
 ```
 
 sed -n '2,4{s/^/$/;p}' file23
+
 ## OUTPUT
 ```
 $1001 | Ram | 10000 | HR
@@ -448,6 +493,7 @@ $1003 | Joe |  7000 | Developer
 ```
 
 sed -n '2,4{s/$/*/;p}' file23
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR*
@@ -467,6 +513,7 @@ cat > file21
 ```
 
 sort file21
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
@@ -487,6 +534,7 @@ cat > file22
 ```
 
 uniq file22
+
 ## OUTPUT
 ```
 1001 | Ram | 10000 | HR
@@ -499,7 +547,8 @@ uniq file22
 # Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
- ## OUTPUT
+
+## OUTPUT
 ```
 1001 | RAM | 10000 | HR
 1001 | RAM | 10000 | HR
@@ -527,6 +576,7 @@ www. mrcet.... com
 ```
 
 cat urllist.txt | tr -d ' '
+
 ## OUTPUT
 ```
 www.yahoo.com
@@ -535,6 +585,7 @@ www.mrcet....com
 ```
 
 cat urllist.txt | tr -d ' ' | tr -s '.'
+
 ## OUTPUT
 ```
 www.yahoo.com
@@ -545,6 +596,7 @@ www.mrcet.com
 # Backup commands
 
 tar -cvf backup.tar *
+
 ## OUTPUT
 ```
 bench.py
@@ -561,6 +613,7 @@ urllist.txt
 mkdir backupdir
 mv backup.tar backupdir
 tar -tvf backup.tar
+
 ## OUTPUT
 ```
 -rw-r--r-- user/group 0 2024-02-25 14:30:00 file1.txt
@@ -570,6 +623,7 @@ drwxr-xr-x user/group 0 2024-02-25 14:30:00 directory1/
 ```
 
 tar -xvf backup.tar
+
 ## OUTPUT
 ```
 x file1.txt
@@ -580,12 +634,14 @@ x directory1/file3.txt
 
 gzip backup.tar
 ls .gz
+
 ## OUTPUT
 ```
 backup.tar.gz
 ```
 
 gunzip backup.tar.gz
+
 ## OUTPUT
 ```
 backup.tar
@@ -600,6 +656,7 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 
 chmod 755 my-script.sh
 ./my-script.sh
+
 ## OUTPUT
 ```
 hello in this world
@@ -617,6 +674,7 @@ stop
 ```
 
 cat herecheck.txt
+
 ## OUTPUT
 ```
 hello in this world
@@ -657,6 +715,7 @@ ps
  
 chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
+
 ## OUTPUT
 ```
 ./scriptest.sh: line 1: #!/bin/sh: No such file or directory
@@ -676,18 +735,21 @@ The $$ is  14337
 ```
  
 ls file1
+
 ## OUTPUT
 ```
 file1
 ```
 
 echo $?
+
 ## OUTPUT
 ```
 0
 ```
 
 echo $?
+
 ## OUTPUT
 ```
 1
@@ -696,6 +758,7 @@ echo $?
 ./one
 bash: ./one: Permission denied
 echo $?
+
 ## OUTPUT 
 ```
 0
@@ -703,6 +766,7 @@ echo $?
 
 abcd
 echo $?
+
 ## OUTPUT
 ```
 127
@@ -736,6 +800,7 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
+
 ## OUTPUT
 ```
 baseball is less than hockey
@@ -743,6 +808,7 @@ baseball is less than hockey
 
 chmod 755 strcomp.sh
 ./strcomp.sh 
+
 ## OUTPUT
 ```
 You are the owner of the /etc/passwd file
@@ -774,6 +840,7 @@ fi
 ```
 
 ./psswdperm.sh
+
 ## OUTPUT
 ```
 "/root The object exists, is it a file?"
@@ -826,6 +893,7 @@ fi
 ```
 
 ./ifnested.sh 
+
 ## OUTPUT
 ```
 “/home/sec The object exists, is it a file?”
@@ -872,6 +940,7 @@ fi
 
 $ chmod 755 iftest.sh
 $ ./iftest.sh 
+
 ## OUTPUT
 ```
 “The test value 10 is greater than 5”
@@ -925,6 +994,7 @@ fi
 
 $ chmod 755 ifnested.sh
 $ ./ifnested.sh 
+
 ## OUTPUT
 ```
 “/home/sec The object exists, is it a file?”
@@ -958,6 +1028,7 @@ fi
 
 $ chmod 755 elifcheck.sh
 $ ./elifcheck.sh 
+
 ## OUTPUT
 ```
 ./elifcheck.sh: line 1: #!/bin/bash: No such file or directory
@@ -979,6 +1050,7 @@ fi
 
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
+
 ## OUTPUT
 ```
 ./ifcompound.sh: line 1: #!/bin/bash: No such file or directory
@@ -1004,6 +1076,7 @@ esac
 
 $ chmod 755 casecheck.sh 
 $ ./casecheck.sh 
+
 ## OUTPUT
 ```
 Welcome Ram/Rahim
@@ -1027,6 +1100,7 @@ done
 
 $ chmod 755 whiletest.sh
 $ ./whiletest.sh
+
 ## OUTPUT
 ```
 10
@@ -1053,6 +1127,7 @@ done
 ```
 
 $ chmod 755 untiltest.sh
+
 ## OUTPUT
 ```
 100
@@ -1083,6 +1158,7 @@ done
 ```
  
 $ chmod 755 forin2.sh
+
 ## OUTPUT
 ```
 ./forin1.sh: line 1: #!/bin/bash: No such file or directory
@@ -1135,6 +1211,7 @@ done
 ```
 
 $ chmod 755 forin1.sh
+
 ## OUTPUT
 ```
 The next state is Alabama
@@ -1167,6 +1244,7 @@ Adilabad
 Bhadrachalam
 Khammam
 ```
+
 ## OUTPUT
 ```
 Visit beautiful cities
@@ -1190,6 +1268,7 @@ done
 
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
+
 ## OUTPUT
 ```
 The value is i is 1
@@ -1211,6 +1290,7 @@ done
 
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
+
 ## OUTPUT
 ```
 1 - 5
@@ -1236,6 +1316,7 @@ done
 
 $ chmod 755 fornested1.sh
 $ ./fornested1.sh 
+
  ## OUTPUT
 ```
 Starting loop 1:
@@ -1266,6 +1347,7 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
+
 ## OUTPUT
 ```
 Iteration number: 1
@@ -1292,6 +1374,7 @@ echo "The for loop is completed“
 
 $ chmod 755 forcontinue.sh
 $ ./forcontinue.sh 
+
 ## OUTPUT
 ```
 Iteration number: 1
@@ -1312,6 +1395,7 @@ echo "Hello $name, welcome to my program. "
  
 $ chmod 755 exread.sh 
 $ ./exread.sh 
+
 ## OUTPUT
 ```
 Enter your name: John
@@ -1327,6 +1411,7 @@ echo "Hello $name, welcome to my program. “
 ```
 
 $ chmod 755 exread1.sh 
+
 ## OUTPUT
 ```
 Enter your name: Aaron
@@ -1352,6 +1437,7 @@ fi
 
 ./funcex.sh 
 ./funcex.sh 1 2
+
 ## OUTPUT
 ```
 $ bash script.sh 1 2
@@ -1368,6 +1454,7 @@ done
 ```
 
 $ chmod 777 argshift.sh
+
 ## OUTPUT
 ```
 1
@@ -1391,6 +1478,7 @@ done
 ```
 
 $ chmod 777 argshift.sh
+
 ## OUTPUT
 ```
 1
@@ -1409,6 +1497,7 @@ while (( "$#" )); do
 done
 set +x
 ```
+
 ## OUTPUT
 ```
  ./argshift.sh 1 2 3
@@ -1457,6 +1546,7 @@ ubcdfghj
 ```
 
 awk -f nc.awk data.dat
+
 ## OUTPUT 
 ```
 7         bcdfghj
@@ -1499,6 +1589,7 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+
 ## OUTPUT 
 ```
 locathost:~# chmod 755 palindrome.sh
@@ -1515,4 +1606,5 @@ Number is palindrome
 ```
 
 # RESULT:
+
 The Commands are executed successfully.
